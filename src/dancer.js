@@ -3,9 +3,9 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
 
   // this = Object.create(MakeDancer.prototype);
 
-  // this.top = top;
-  // this.left = left;
-  // this.timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
+  this.timeBetweenSteps = timeBetweenSteps;
 
 
   /**
@@ -43,8 +43,8 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
 };
 
 MakeDancer.prototype.step = function() {
-  setTimeout.bind(this, this.step, this.timeBetweenSteps)();
-  // setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  // setTimeout.bind(this, this.step, this.timeBetweenSteps)();
+  setTimeout(this.step.bind(this, this.timeBetweenSteps), this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {

@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 
 
+
     // make a dancer with a random position
 
     var dancer = dancerMakerFunction(
