@@ -44,13 +44,14 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
 
 MakeDancer.prototype.step = function() {
   // setTimeout.bind(this, this.step, this.timeBetweenSteps)();
-  setTimeout(this.step.bind(this, this.timeBetweenSteps), this.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
-    top: top,
-    left: left
+    // perhaps set top: this.top and left: this.left
+    top: this.top,
+    left: this.left
   };
 
   this.$node.css(styleSettings);
