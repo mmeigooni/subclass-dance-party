@@ -32,3 +32,26 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+describe('bounceyDancer', function() {
+
+  var bounceyDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    bounceyDancer = new MakeBounceyDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(bounceyDancer.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('should have a step function that animates a node', function() {
+    sinon.spy(bounceyDancer.$node, 'animate');
+    bounceyDancer.step();
+    expect(bounceyDancer.$node.animate.called).to.be.true;
+  });
+
+});
+
