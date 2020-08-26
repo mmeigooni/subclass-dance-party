@@ -1,5 +1,7 @@
 body, html{
   height:100%;
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/85973093971652221/892D13111A728FB3BEF42098CE8ECBBD7D67A941/');
+  background-size: 100%;
 }
 body{
   margin: 0px;
@@ -9,7 +11,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpDancers, .orbitalDance{
   padding:5px 12px;
   float:right;
 }
@@ -21,7 +23,9 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border-width: 10px;
+  border-style: solid;
+  border-color: red;
   border-radius:10px;
   position:absolute;
 }
@@ -34,5 +38,7 @@ body, a:link, a:visited, a:active{
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 10px solid green;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: green;
 }

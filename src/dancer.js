@@ -31,6 +31,24 @@ MakeDancer.prototype.setPosition = function(top, left) {
 
 };
 
+MakeDancer.prototype.lineUpDancers = function() {
+  this.left = 50;
+  this.setPosition();
+};
+
+MakeDancer.prototype.orbitDance = function() {
+  this.left = '50%';
+  this.top = '50%';
+  this.setPosition();
+
+  // let rando = Math.floor(this.timeBetweenSteps / 10);
+  // $(this).animate({left: this.left += rando });
+  // $(this).animate({top: this.top += rando });
+  // $(this).animate({left: this.left -= rando });
+  // $(this).animate({top: this.top -= rando });
+
+};
+
 
 // delete the creation and returning of dancer obj, due to new keyword
 
